@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7F79E131B995687002B1CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F79E121B995687002B1CB6 /* AppDelegate.swift */; };
+		D7F79E151B995687002B1CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F79E141B995687002B1CB6 /* ViewController.swift */; };
+		D7F79E1A1B995687002B1CB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F79E191B995687002B1CB6 /* Images.xcassets */; };
+		D7F79E401B99853B002B1CB6 /* GDFSlideController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F79E3F1B99853B002B1CB6 /* GDFSlideController.m */; };
+		D7F79E431B9987C3002B1CB6 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F79E421B9987C3002B1CB6 /* LeftViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7F79E0D1B995687002B1CB6 /* MiBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F79E111B995687002B1CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F79E121B995687002B1CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7F79E141B995687002B1CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7F79E191B995687002B1CB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D7F79E1C1B995687002B1CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D7F79E351B998495002B1CB6 /* MiBeacon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiBeacon-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7F79E3E1B998533002B1CB6 /* GDFSlideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GDFSlideController.h; path = ../view/GDFSlideController.h; sourceTree = "<group>"; };
+		D7F79E3F1B99853B002B1CB6 /* GDFSlideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDFSlideController.m; path = ../view/GDFSlideController.m; sourceTree = "<group>"; };
+		D7F79E421B9987C3002B1CB6 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7F79E0A1B995687002B1CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7F79E041B995687002B1CB6 = {
+			isa = PBXGroup;
+			children = (
+				D7F79E0F1B995687002B1CB6 /* MiBeacon */,
+				D7F79E0E1B995687002B1CB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7F79E0E1B995687002B1CB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7F79E0D1B995687002B1CB6 /* MiBeacon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7F79E0F1B995687002B1CB6 /* MiBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				D7F79E121B995687002B1CB6 /* AppDelegate.swift */,
+				D7F79E141B995687002B1CB6 /* ViewController.swift */,
+				D7F79E421B9987C3002B1CB6 /* LeftViewController.swift */,
+				D7F79E3E1B998533002B1CB6 /* GDFSlideController.h */,
+				D7F79E3F1B99853B002B1CB6 /* GDFSlideController.m */,
+				D7F79E191B995687002B1CB6 /* Images.xcassets */,
+				D7F79E1B1B995687002B1CB6 /* LaunchScreen.xib */,
+				D7F79E101B995687002B1CB6 /* Supporting Files */,
+				D7F79E351B998495002B1CB6 /* MiBeacon-Bridging-Header.h */,
+			);
+			path = MiBeacon;
+			sourceTree = "<group>";
+		};
+		D7F79E101B995687002B1CB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7F79E111B995687002B1CB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7F79E0C1B995687002B1CB6 /* MiBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7F79E2C1B995688002B1CB6 /* Build configuration list for PBXNativeTarget "MiBeacon" */;
+			buildPhases = (
+				D7F79E091B995687002B1CB6 /* Sources */,
+				D7F79E0A1B995687002B1CB6 /* Frameworks */,
+				D7F79E0B1B995687002B1CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiBeacon;
+			productName = MiBeacon;
+			productReference = D7F79E0D1B995687002B1CB6 /* MiBeacon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7F79E051B995687002B1CB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = silver;
+				TargetAttributes = {
+					D7F79E0C1B995687002B1CB6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = D7F79E081B995687002B1CB6 /* Build configuration list for PBXProject "MiBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7F79E041B995687002B1CB6;
+			productRefGroup = D7F79E0E1B995687002B1CB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7F79E0C1B995687002B1CB6 /* MiBeacon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7F79E0B1B995687002B1CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F79E1A1B995687002B1CB6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7F79E091B995687002B1CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7F79E151B995687002B1CB6 /* ViewController.swift in Sources */,
+				D7F79E431B9987C3002B1CB6 /* LeftViewController.swift in Sources */,
+				D7F79E401B99853B002B1CB6 /* GDFSlideController.m in Sources */,
+				D7F79E131B995687002B1CB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7F79E1B1B995687002B1CB6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F79E1C1B995687002B1CB6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7F79E2A1B995688002B1CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7F79E2B1B995688002B1CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7F79E2D1B995688002B1CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = MiBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MiBeacon/MiBeacon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7F79E2E1B995688002B1CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = MiBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MiBeacon/MiBeacon-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7F79E081B995687002B1CB6 /* Build configuration list for PBXProject "MiBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7F79E2A1B995688002B1CB6 /* Debug */,
+				D7F79E2B1B995688002B1CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7F79E2C1B995688002B1CB6 /* Build configuration list for PBXNativeTarget "MiBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7F79E2D1B995688002B1CB6 /* Debug */,
+				D7F79E2E1B995688002B1CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7F79E051B995687002B1CB6 /* Project object */;
+}
