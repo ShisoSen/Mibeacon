@@ -1,0 +1,11 @@
+{
+    "grouped": true,
+    "title": "Setting",
+    "controllerName": "SettingVC",
+    "sections": [
+                 { "title":"Notification:", "elements": [
+                                                     { "type":"QLabelElement", "title":"time interval", "value":"100"}
+                                                     ]
+                 }
+                 ]
+}
