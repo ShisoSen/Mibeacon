@@ -1,0 +1,13 @@
+//
+//  MiBeacon.h
+//  MiBeacon
+//
+//  Created by Sicong Qian on 15/9/14.
+//  Copyright (c) 2015年 silverup.co. All rights reserved.
+//
+
+#ifndef MiBeacon_MiBeacon_h
+#define MiBeacon_MiBeacon_h
+#import <UIKit/UIKit.h>
+
+#endif

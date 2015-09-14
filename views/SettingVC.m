@@ -10,24 +10,14 @@
 
 @implementation SettingVC
 
-- (QuickDialogController *)initWithRoot:(QRootElement *)rootElement{
-    self = [super initWithRoot:rootElement];
-    if (self) {
-        
-    }
-    return self;
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    NSLog(@"%s",__func__);
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.241 green:0.474 blue:1.000 alpha:1.000]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = false;
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(BackAction:)];
+    left.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = left;
-}
-
-- (void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    NSLog(@"%s",__func__);
 }
 
 - (void)BackAction:(id)sender{

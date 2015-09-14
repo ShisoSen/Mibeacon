@@ -9,8 +9,9 @@
 #import "CenterVC.h"
 #import "RACollectionViewReorderableTripletLayout.h"
 #import "CenterCollectionCell.h"
-#import "QuickDialog.h"
 #import "DispatchVC.h"
+#import "ScanVC.h"
+#import "SettingVC.h"
 
 NSUInteger const MaxCellCount = 17;
 @interface CenterVC () <RACollectionViewDelegateReorderableTripletLayout, RACollectionViewReorderableTripletLayoutDataSource>
@@ -26,7 +27,7 @@ NSUInteger const MaxCellCount = 17;
 @implementation CenterVC{
     UINavigationItem *navItems;
     UIBarButtonItem *rightItemDel;
-    UINavigationController *settingPage;
+    UIViewController *settingPage;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -276,15 +277,21 @@ NSUInteger const MaxCellCount = 17;
     }else{
         if (indexPath.section==1) {
             if (indexPath.item==0) {
-                QRootElement *root = [[QRootElement alloc] initWithJSONFile:@"Setting"];
-                settingPage = [QuickDialogController controllerWithNavigationForRoot:root];
-                [settingPage setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-                [self presentViewController:settingPage animated:YES completion:^{
+                settingPage = [[SettingVC alloc]initWithNibName:nil bundle:nil];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:settingPage];
+                [nav setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+                [self presentViewController:nav animated:YES completion:^{
+                    NSLog(@"111");
+                }];
+            }else if(indexPath.item==1){
+                DispatchVC *dispatchVC = [[DispatchVC alloc] initWithNibName:nil bundle:nil];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dispatchVC];
+                [self presentViewController:nav animated:YES completion:^{
                     NSLog(@"111");
                 }];
             }else{
-                DispatchVC *dispatchVC = [[DispatchVC alloc] initWithNibName:nil bundle:nil];
-                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dispatchVC];
+                ScanVC *scanVC = [[ScanVC alloc] initWithNibName:nil bundle:nil];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:scanVC];
                 [self presentViewController:nav animated:YES completion:^{
                     NSLog(@"111");
                 }];
@@ -310,131 +317,5 @@ NSUInteger const MaxCellCount = 17;
 
 - (void)slideControllerTapClose:(GDFSlideController *)slideController{
     
-}
-+ (QElement *)createSampleControls {
-    QRootElement *root = [[QRootElement alloc] init];
-    root.grouped = YES;
-    root.title = @"Sample Controls";
-    root.controllerName = @"SettingVC";
-    QSection *controls = [[QSection alloc] initWithTitle:@"Change something"];
-    
-    QLabelElement *element1 = [[QLabelElement alloc] initWithTitle:@"Label" Value:@"element"];
-    
-    
-    QRadioElement *radioElement = [[QRadioElement alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Option 1", @"Option 2", @"Option 3",@"Option 11", @"Option 12", @"Option 13", @"Option 21", @"Option 22", @"Option 33", @"Option 41", @"Option 42", @"Option 43", @"Option 51", @"Option 52", @"Option 53", @"Option 61", @"Option 62", @"Option 63", @"Option 71", @"Option 72", @"Option 73", nil] selected:7 title:@"Radio"];
-    radioElement.itemsImageNames = @[ @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel", @"iPhone", @"intel" ];
-    radioElement.key = @"radio1";
-    
-    
-    
-    QBooleanElement *boolElement = [[QBooleanElement alloc] initWithTitle:@"Boolean Element" BoolValue:YES];
-    boolElement.controllerAction = @"exampleAction:";
-    boolElement.key = @"bool1";
-    
-    QEntryElement *entryElement = [[QEntryElement alloc] initWithTitle:@"Entry Element" Value:nil Placeholder:@"type here"];
-    entryElement.key = @"entry1";
-    
-    NSArray *values = [NSArray arrayWithObjects:@"Ferrari", @"Ms.",@"Mrs.",@"Miss",@"Mr.",@"Prof.",@"A/Prof.",nil];
-    QAutoEntryElement *autoElement = [[QAutoEntryElement alloc] initWithTitle:@"AutoComplete" value:nil placeholder:@"type letter M"];
-    autoElement.autoCompleteValues = values;
-    autoElement.autoCompleteColor = [UIColor orangeColor];
-    autoElement.key = @"entry2";
-    
-    controls.footer = @"More controls will be added.";
-    [controls addElement:element1];
-    
-    [controls addElement:radioElement];
-    [controls addElement:entryElement];
-    [controls addElement:autoElement];
-    
-    [controls addElement:boolElement];
-    QDateTimeInlineElement *dateElement = [[QDateTimeInlineElement alloc] initWithTitle:@"DateTime" date:[NSDate date] andMode:UIDatePickerModeDateAndTime];
-    dateElement.key = @"date1";
-    [controls addElement:dateElement];
-    
-    QFloatElement *slider = [[QFloatElement alloc] initWithTitle:@"Float Element" value:0.5];
-    slider.key = @"slider1";
-    [controls addElement:slider];
-    
-    QDecimalElement *decimal = [[QDecimalElement alloc] initWithTitle:@"Decimal Element" value:@0.5];
-    decimal.key = @"decimal1";
-    decimal.fractionDigits = 2;
-    [controls addElement:decimal];
-    
-    QMultilineElement *multiline = [[QMultilineElement alloc] initWithTitle:@"Multiline" value:@""];
-    multiline.key = @"multiline";
-    [controls addElement:multiline];
-    
-    QLabelElement *element2 = [[QLabelElement alloc] initWithTitle:@"Label Different Height" Value:@"70"];
-    element2.height = 70;
-    [controls addElement:element2];
-    
-    [controls addElement:[QLoadingElement new]];
-    
-    QProgressElement *progressElement = [QProgressElement new];
-    progressElement.progress = 0.24601;
-    [controls addElement:progressElement];
-    
-    QSection *btnSection = [[QSection alloc] init];
-    QButtonElement *button = [[QButtonElement alloc] initWithTitle:@"Show form values"];
-    button.onSelected = ^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello"
-                                                        message:[NSString stringWithFormat:@"1: %ld\n2: %@\n3: %d\n4:%@\n5:%f\n6:%@\n7:%@",
-                                                                 (long)radioElement.selected ,
-                                                                 entryElement.textValue,
-                                                                 boolElement.boolValue,
-                                                                 dateElement.dateValue ,
-                                                                 slider.floatValue,
-                                                                 decimal.numberValue,
-                                                                 autoElement.textValue]
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        
-    };
-    [btnSection addElement:button];
-    
-    QSection *btnSection2 = [[QSection alloc] init];
-    QButtonElement *button2 = [[QButtonElement alloc] initWithTitle:@"Fetch into dictionary"];
-    button2.onSelected = ^{
-        
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-        [root fetchValueIntoObject:dict];
-        
-        NSString *msg = @"Values:";
-        for (NSString *aKey in dict){
-            msg = [msg stringByAppendingFormat:@"\n- %@: %@", aKey, [dict valueForKey:aKey]];
-        }
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello"
-                                                        message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        
-    };
-    [btnSection2 addElement:button2];
-    btnSection2.footer = @"Here's a really long footer text that could be used to make your users happy!";
-    
-    QSection *segmented = [[QSection alloc] initWithTitle:@"Here's a long title for this segmented control"];
-    segmented.footer = @"And heres a long footer text for this segmented control";
-    
-    QSegmentedElement *segmentedElement = [[QSegmentedElement alloc] initWithItems:[[NSArray alloc] initWithObjects:@"Option 1", @"Option 2", @"Option 3", nil] selected:0 title:@"Radio"];
-    radioElement.key = @"segmented1";
-    [segmented addElement:segmentedElement];
-    
-    [root addSection:controls];
-    [root addSection:segmented];
-    [root addSection:btnSection];
-    [root addSection:btnSection2];
-    
-    for (QSection *section in root.sections) {
-        for (QElement *e in section.elements) {
-            if ([e isKindOfClass:[QEntryElement class]]) {
-                ((QEntryElement *)e).onValueChanged = ^(QRootElement *el){
-                    NSLog(@"Value changed: %@", el);
-                };
-            }
-        }
-    }
-    return root;
 }
 @end

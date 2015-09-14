@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 silverup.co. All rights reserved.
 //
 
-#import "QuickDialogController.h"
 
-@interface SettingVC : QuickDialogController
+@interface SettingVC : UIViewController
 
 @end
