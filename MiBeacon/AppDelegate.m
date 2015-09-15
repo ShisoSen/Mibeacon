@@ -39,6 +39,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"NSUserDefaults: %@",defaults);
     return YES;
 }
 

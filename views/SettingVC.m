@@ -8,6 +8,10 @@
 
 #import "SettingVC.h"
 
+@interface SettingVC()
+@property (nonatomic, strong) UITableView *table;
+@end
+
 @implementation SettingVC
 
 - (void)viewDidLoad{

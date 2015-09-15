@@ -125,7 +125,7 @@ NSUInteger const MaxCellCount = 17;
     [_photosArray removeAllObjects];
     _photosArray = nil;
     _photosArray = [NSMutableArray array];
-    for (NSInteger i = 1; i <= 7; i++) {
+    for (NSInteger i = 1; i <= 4; i++) {
         NSString *photoName = [NSString stringWithFormat:@"%ld.jpg",(long)i];
         UIImage *photo = [UIImage imageNamed:photoName];
         [_photosArray addObject:photo];
@@ -253,6 +253,7 @@ NSUInteger const MaxCellCount = 17;
         }else{
             cell.imageView.frame = cell.bounds;
             cell.imageView.image = _photosArray[indexPath.item];
+            cell.title = [NSString stringWithFormat:@"cell_%ld",(long)indexPath.item];
             [cell.contentView addSubview:cell.imageView];
         }
         return cell;

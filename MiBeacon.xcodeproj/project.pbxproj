@@ -19,6 +19,7 @@
 		BB3972FA1BA161CE00647E65 /* DispatchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3972F91BA161CE00647E65 /* DispatchVC.m */; };
 		BB3972FD1BA1630400647E65 /* SenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3972FC1BA1630400647E65 /* SenderVC.m */; };
 		BB3973001BA6AF3800647E65 /* ScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3972FF1BA6AF3800647E65 /* ScanVC.m */; };
+		BB3973031BA7BA7500647E65 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB3973021BA7BA7500647E65 /* Settings.bundle */; };
 		BB487C0B1B9E990500AF1C0E /* RACollectionViewReorderableTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB487C081B9E990500AF1C0E /* RACollectionViewReorderableTripletLayout.m */; };
 		BB487C0C1B9E990500AF1C0E /* RACollectionViewTripletLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB487C0A1B9E990500AF1C0E /* RACollectionViewTripletLayout.m */; };
 		BB487C231B9EA10E00AF1C0E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB487C0F1B9EA10E00AF1C0E /* 1.jpg */; };
@@ -81,6 +82,7 @@
 		BB3972FE1BA6AF3800647E65 /* ScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanVC.h; sourceTree = "<group>"; };
 		BB3972FF1BA6AF3800647E65 /* ScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanVC.m; sourceTree = "<group>"; };
 		BB3973011BA6D20800647E65 /* MiBeacon.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiBeacon.pch; sourceTree = "<group>"; };
+		BB3973021BA7BA7500647E65 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BB487C071B9E990500AF1C0E /* RACollectionViewReorderableTripletLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACollectionViewReorderableTripletLayout.h; sourceTree = "<group>"; };
 		BB487C081B9E990500AF1C0E /* RACollectionViewReorderableTripletLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACollectionViewReorderableTripletLayout.m; sourceTree = "<group>"; };
 		BB487C091B9E990500AF1C0E /* RACollectionViewTripletLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACollectionViewTripletLayout.h; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				BBB62D311B9D2D680096EF1A /* Info.plist */,
 				BBB62D321B9D2D680096EF1A /* main.m */,
 				BB3973011BA6D20800647E65 /* MiBeacon.pch */,
+				BB3973021BA7BA7500647E65 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				BB487C2D1B9EA10E00AF1C0E /* 19.jpg in Resources */,
 				BB487C2A1B9EA10E00AF1C0E /* 16.jpg in Resources */,
 				BB487C2E1B9EA10E00AF1C0E /* 2.jpg in Resources */,
+				BB3973031BA7BA7500647E65 /* Settings.bundle in Resources */,
 				BB487C331B9EA10E00AF1C0E /* 6.jpg in Resources */,
 				BB487C321B9EA10E00AF1C0E /* 5.jpg in Resources */,
 				BB487C251B9EA10E00AF1C0E /* 11.jpg in Resources */,
