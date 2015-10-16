@@ -28,6 +28,7 @@ NSUInteger const MaxCellCount = 17;
     UINavigationItem *navItems;
     UIBarButtonItem *rightItemDel;
     UIViewController *settingPage;
+    DispatchVC *dispatchVC;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -285,7 +286,7 @@ NSUInteger const MaxCellCount = 17;
                     NSLog(@"111");
                 }];
             }else if(indexPath.item==1){
-                DispatchVC *dispatchVC = [[DispatchVC alloc] initWithNibName:nil bundle:nil];
+                dispatchVC = [[DispatchVC alloc] initWithNibName:nil bundle:nil];
                 UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dispatchVC];
                 [self presentViewController:nav animated:YES completion:^{
                     NSLog(@"111");

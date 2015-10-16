@@ -32,8 +32,6 @@
 }
 
 - (void)BackAction:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"222");
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
